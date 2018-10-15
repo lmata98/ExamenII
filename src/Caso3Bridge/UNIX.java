@@ -9,11 +9,10 @@ package Caso3Bridge;
  *
  * @author tanzanita
  */
-public class JVM_PTS implements ISistema {
+public class UNIX implements ISistema{
 
     @Override
     public void implementarSistema() {
-        System.out.println("El sistem a implementar corresponde a JVC PTS");
-    }
+System.out.println("El sistem a implementar corresponde a UNIX PTS");    }
     
 }

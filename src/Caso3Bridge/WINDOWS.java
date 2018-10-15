@@ -9,7 +9,7 @@ package Caso3Bridge;
  *
  * @author tanzanita
  */
-public class WindowsPTS implements ISistema{
+public class WINDOWS implements ISistema{
 
     @Override
     public void implementarSistema() {

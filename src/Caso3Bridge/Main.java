@@ -14,10 +14,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        AbstractScheduler as = new PreemptiveThreadScheduler(new WindowsPTS());
+        AbstractScheduler as = new PreemptiveThreadScheduler(new WINDOWS());
         as.atenderProceso();
         
-        AbstractScheduler as1 = new TimeSliceThreadScheduler(new WindowsPTS());
+        AbstractScheduler as1 = new TimeSliceThreadScheduler(new WINDOWS());
         as1.atenderProceso();
         
         
