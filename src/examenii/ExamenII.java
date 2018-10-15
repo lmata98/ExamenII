@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package examenii;
-import Caso4Composite.operandoComposite;
-import Caso4Composite.operadorNumerico;
+import Caso4Composite.operadorComposite;
+import Caso4Composite.operandoNumerico;
 
 /**
  *
@@ -21,16 +21,16 @@ public class ExamenII {
     public static void main(String[] args) {
         // TODO code application logic here
     
-    operandoComposite op= new  operandoComposite("+");
-    operandoComposite op1= new  operandoComposite("*");
-    operandoComposite op3= new  operandoComposite("-");
-    operadorNumerico num= new operadorNumerico(75);
-    operadorNumerico num1= new operadorNumerico(65);
-    operadorNumerico num2= new operadorNumerico(12);
+    operadorComposite op= new  operadorComposite("+");
+    operadorComposite op1= new  operadorComposite("*");
+    operadorComposite op3= new  operadorComposite("-");
+    operandoNumerico num= new operandoNumerico(75);
+    operandoNumerico num1= new operandoNumerico(65);
+    operandoNumerico num2= new operandoNumerico(12);
     op.agregar(num);
     
-    operandoComposite op4= new  operandoComposite("-");
-    operandoComposite op5= new  operandoComposite("/");
+    operadorComposite op4= new  operadorComposite("-");
+    operadorComposite op5= new  operadorComposite("/");
     op1.agregar(num1);
     op1.agregar(num2);
    // op.agregar(op1);

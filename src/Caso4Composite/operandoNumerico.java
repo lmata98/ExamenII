@@ -11,11 +11,11 @@ import Caso4Composite.expresionArimetrica;
  *
  * @author Leonardo Mata
  */
-public class operadorNumerico implements expresionArimetrica {
+public class operandoNumerico implements expresionArimetrica {
     
     private int valor;
 
-    public operadorNumerico(int valor) {
+    public operandoNumerico(int valor) {
         this.valor = valor;
     }
 
