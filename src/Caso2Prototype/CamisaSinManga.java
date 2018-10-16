@@ -13,20 +13,22 @@ public class CamisaSinManga extends Camisa{
     
     public CamisaSinManga() {
         super();
-        setColor("Azul");
-        setTalla("XL");
-        setEstampado("Rayas");
+        
     }
     
     
     public CamisaSinManga(String color, String talla, String estampado) {
-        super();
-        setColor(color);
-        setTalla(talla);
-        setEstampado(estampado);
+        super(color, talla, estampado);
     }
+    
+    
         @Override
     public IPrototype clone(){
         return new CamisaSinManga();
+    }
+    
+     @Override
+    public String toString() {
+        return "CamisaSinManga{" + super.toString() + '}';
     }
 }

@@ -12,12 +12,30 @@ package Caso2Prototype;
 public class Main {
             
         public static void main(String[] args) {
-             PrototypeCache camisa = new PrototypeCache();
-             camisa.generarPrototype();
-             System.out.println("Camisa manga larga: "+camisa.getPrototype("Camisa manga larga").toString());
-             System.out.println("Camisa sin manga: "+camisa.getPrototype("Camisa sin manga").toString());
-         
+            
+            
+            PrototypeCache prototipos  = new PrototypeCache();
+        try {
+            Camisa unaCamisa = (Camisa) prototipos.getPrototype("CamisaMangaLarga");
+            unaCamisa.setColor("Negro");
+            unaCamisa.setEstampado("Rayas");
+            unaCamisa.setTalla("M");
+            System.out.println("La camisa prototipada es " + unaCamisa.toString());
+            
+            Camisa unaCamisa2 = (Camisa) prototipos.getPrototype("CamisaSinManga");
+            unaCamisa2.setColor("Verde");
+            unaCamisa2.setEstampado("Fllireada");
+            unaCamisa2.setTalla("XL");
+            System.out.println("La camisa prototipada es " + unaCamisa2.toString());
+            
+        } catch (CloneNotSupportedException ex) {
+            System.out.println("Problemas generando clon de la camisa solicitado");
+        }
+        
     }
         
     
 }
+
+
+

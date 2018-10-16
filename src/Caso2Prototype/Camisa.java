@@ -9,24 +9,24 @@ package Caso2Prototype;
  *
  * @author tanzanita
  */
-public abstract class Camisa implements IPrototype {
-    private String color;
-    private String talla;
-    private String estampado;
+public class Camisa implements IPrototype {
+    protected String color;
+    protected String talla;
+    protected String estampado;
     
-    
-    public Camisa(){
+    protected Camisa(){
         
     }
     
-    public Camisa(String color, String talla, String estampado){
-        setColor(color);
-        setTalla(talla);
-        setEstampado(estampado);
-          
-    }
-    
+    protected Camisa(String color, String talla, String estampado){
+        this.color = color;
+        this.talla = talla;
+        this.estampado = estampado;
 
+
+    }
+
+    
     public String getColor() {
         return color;
     }

@@ -15,18 +15,23 @@ public class PrototypeCache {
     private HashMap<String, Camisa> prototipos = new HashMap<String, Camisa>();
     
     public PrototypeCache() {
+        prototipos.put ("CamisaMangaLarga", new CamisaMangaLarga());
+        prototipos.put ("CamisaSinManga", new CamisaSinManga());
        
     }
-            
-    public void generarPrototype() {
-        
-        this.prototipos.put ("Camisa manga larga", new CamisaMangaLarga());
-        this.prototipos.put ("Camisa sin manga", new CamisaSinManga());
 
+    public HashMap<String, Camisa> getPrototipos(String tipo) {
+        return prototipos;
     }
+            
     
     
-    public IPrototype getPrototype(String tipo){
-        return this.prototipos.get(tipo).clone();
+    public IPrototype getPrototype(String tipo) throws CloneNotSupportedException {
+        return prototipos.get(tipo).clone();
     }
 }
+
+
+
+
+
