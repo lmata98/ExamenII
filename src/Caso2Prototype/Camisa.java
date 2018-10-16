@@ -9,23 +9,21 @@ package Caso2Prototype;
  *
  * @author tanzanita
  */
-public class Camisa implements IPrototype {
-    protected String color;
-    protected String talla;
-    protected String estampado;
-    
-    protected Camisa(){
-        
-    }
+public abstract class Camisa implements Cloneable {
+    private String color;
+    private String talla;
+    private String estampado;
     
     protected Camisa(String color, String talla, String estampado){
-        this.color = color;
-        this.talla = talla;
-        this.estampado = estampado;
-
-
+        setColor(color);
+        setTalla(talla);
+        setEstampado(estampado);
     }
-
+ 
+    @Override
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
     
     public String getColor() {
         return color;
@@ -51,14 +49,7 @@ public class Camisa implements IPrototype {
         this.estampado = estampado;
     }
 
-     @Override
-    public IPrototype clone() {
-        try {
-            return (IPrototype) super.clone();
-        } catch (CloneNotSupportedException ex) {
-            return null;
-        }
-    }
+     
 
     @Override
     public String toString() {

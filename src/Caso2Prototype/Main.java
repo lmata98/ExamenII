@@ -16,18 +16,11 @@ public class Main {
             
             PrototypeCache prototipos  = new PrototypeCache();
         try {
-            Camisa unaCamisa = (Camisa) prototipos.getPrototype("CamisaMangaLarga");
-            unaCamisa.setColor("Negro");
-            unaCamisa.setEstampado("Rayas");
-            unaCamisa.setTalla("M");
+            Camisa unaCamisa = (Camisa) prototipos.prototipos("CamisaMangaLarga");
             System.out.println("La camisa prototipada es " + unaCamisa.toString());
             
-            Camisa unaCamisa2 = (Camisa) prototipos.getPrototype("CamisaSinManga");
-            unaCamisa2.setColor("Verde");
-            unaCamisa2.setEstampado("Fllireada");
-            unaCamisa2.setTalla("XL");
-            System.out.println("La camisa prototipada es " + unaCamisa2.toString());
-            
+            Camisa unaCamisa2 = (Camisa) prototipos.prototipos("CamisaSinManga");
+           
         } catch (CloneNotSupportedException ex) {
             System.out.println("Problemas generando clon de la camisa solicitado");
         }

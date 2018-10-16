@@ -11,28 +11,19 @@ package Caso2Prototype;
  */
 public class CamisaMangaLarga extends Camisa{
     
-    public CamisaMangaLarga() {
-        super();
 
-    }
-    
     public CamisaMangaLarga(String color, String talla, String estampado) {
-        super();
-        setColor(color);
-        setEstampado(estampado);
-        setTalla(talla);
+        super(color,talla,estampado);
+        
     }
-     
-    @Override
-    public IPrototype clone(){
-        return new CamisaMangaLarga();
-    }
+
 
     @Override
     public String toString() {
         return "CamisaMangaLarga{" + super.toString() + '}';
     }
-    
+
+  
     
     
 }
